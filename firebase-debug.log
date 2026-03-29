@@ -1,0 +1,72 @@
+[debug] [2026-03-29T23:31:58.895Z] ----------------------------------------------------------------------
+[debug] [2026-03-29T23:31:58.898Z] Command:       /usr/local/bin/node /usr/local/bin/firebase projects:create abn-group-website --display-name ABN Group Website
+[debug] [2026-03-29T23:31:58.899Z] CLI Version:   15.12.0
+[debug] [2026-03-29T23:31:58.899Z] Platform:      darwin
+[debug] [2026-03-29T23:31:58.899Z] Node Version:  v22.17.1
+[debug] [2026-03-29T23:31:58.899Z] Time:          Sun Mar 29 2026 20:31:58 GMT-0300 (Argentina Standard Time)
+[debug] [2026-03-29T23:31:58.899Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-29T23:31:58.907Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-29T23:31:58.907Z] > authorizing via signed-in user (darts@abndigital.com.ar)
+[debug] [2026-03-29T23:31:58.912Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:31:58.912Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:31:58.913Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-03-29T23:31:58.913Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"abn-group-website","name":"ABN Group Website"}
+[debug] [2026-03-29T23:31:59.899Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2026-03-29T23:31:59.899Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2026-03-29T23:31:59.975Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID abn-group-website. Please try again with a unique project ID.
+[debug] [2026-03-29T23:32:04.964Z] ----------------------------------------------------------------------
+[debug] [2026-03-29T23:32:04.967Z] Command:       /usr/local/bin/node /usr/local/bin/firebase projects:create abn-group-web-2026 --display-name ABN Group Website
+[debug] [2026-03-29T23:32:04.968Z] CLI Version:   15.12.0
+[debug] [2026-03-29T23:32:04.968Z] Platform:      darwin
+[debug] [2026-03-29T23:32:04.968Z] Node Version:  v22.17.1
+[debug] [2026-03-29T23:32:04.968Z] Time:          Sun Mar 29 2026 20:32:04 GMT-0300 (Argentina Standard Time)
+[debug] [2026-03-29T23:32:04.969Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-29T23:32:04.976Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-29T23:32:04.976Z] > authorizing via signed-in user (darts@abndigital.com.ar)
+[debug] [2026-03-29T23:32:04.981Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:04.981Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:04.982Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-03-29T23:32:04.982Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"abn-group-web-2026","name":"ABN Group Website"}
+[debug] [2026-03-29T23:32:06.073Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2026-03-29T23:32:06.073Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.7368725720536994607"}
+[debug] [2026-03-29T23:32:06.074Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:06.074Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:06.074Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7368725720536994607 [none]
+[debug] [2026-03-29T23:32:06.932Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7368725720536994607 200
+[debug] [2026-03-29T23:32:06.932Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7368725720536994607 {"name":"operations/create_project.global.7368725720536994607","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":7,"message":"No permission to create project in organization"}}
+[debug] [2026-03-29T23:32:07.006Z] FirebaseError: No permission to create project in organization
+    at OperationPoller.poll (/usr/local/lib/node_modules/firebase-tools/lib/operation-poller.js:25:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createCloudProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:237:29)
+    at async createFirebaseProjectAndLog (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:102:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2026-03-29T23:32:20.313Z] ----------------------------------------------------------------------
+[debug] [2026-03-29T23:32:20.316Z] Command:       /usr/local/bin/node /usr/local/bin/firebase projects:addfirebase abn-group-website
+[debug] [2026-03-29T23:32:20.316Z] CLI Version:   15.12.0
+[debug] [2026-03-29T23:32:20.317Z] Platform:      darwin
+[debug] [2026-03-29T23:32:20.317Z] Node Version:  v22.17.1
+[debug] [2026-03-29T23:32:20.317Z] Time:          Sun Mar 29 2026 20:32:20 GMT-0300 (Argentina Standard Time)
+[debug] [2026-03-29T23:32:20.317Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-29T23:32:20.324Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-29T23:32:20.325Z] > authorizing via signed-in user (darts@abndigital.com.ar)
+[debug] [2026-03-29T23:32:20.329Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:20.329Z] Checked if tokens are valid: true, expires at: 1774829760825
+[debug] [2026-03-29T23:32:20.330Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/abn-group-website:addFirebase [none]
+[debug] [2026-03-29T23:32:20.966Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/abn-group-website:addFirebase 403
+[debug] [2026-03-29T23:32:20.967Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/abn-group-website:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-03-29T23:32:20.967Z] Request to https://firebase.googleapis.com/v1beta1/projects/abn-group-website:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2026-03-29T23:32:21.039Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/abn-group-website:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
