@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "abn-group",
     "public": "out",
     "cleanUrls": true,
     "trailingSlash": false,
